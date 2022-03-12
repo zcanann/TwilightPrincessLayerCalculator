@@ -10,13 +10,12 @@ int main()
 	// ======== CONFIG: CHANGE THESE! ========
 
 	// Parameters
-	const Stage stage = Stage::F_SP114_Snowpeak;
-	const char* stageName = getStageId(stage);
+	const Stage stage = Stage::F_SP114_Snowpeak; // See Stages.h for valid values
 	const int roomId = 0;
 	const int layerOverride = -1;
 
 	// Constants
-	DAT_8042dd52 = 0; // Seems to be a constant expected to be between 0 and 5
+	DAT_8042dd52 = 0; // (5x) Fishing Pond. Seems to be an expected parameter between 0 and 5.
 	
 	// Sets the return value of dKy_darkworld_stage_check()
 	// TODO: This should technically be calculated by a function from stageName / roomId
@@ -79,6 +78,7 @@ int main()
 	setEventFlag(DAT_804061e8, 0x0, 0); // (9x) Ordon Village, Ordon Springs, Castle Sewers
 	// ========== END CONFIG ============
 
+	const char* stageName = getStageId(stage);
 	int layerId = getLayerId(stage, roomId, layerOverride);
 	int legacyLayerId = getLayerNo_common_common(getStageId(stage), roomId, layerOverride);
 
