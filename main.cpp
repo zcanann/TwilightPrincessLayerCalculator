@@ -10,7 +10,7 @@ int main()
 	// ======== CONFIG: CHANGE THESE! ========
 
 	// Parameters
-	const Stage stage = Stage::F_SP114_Snowpeak; // See Stages.h for valid values
+	const Stage stage = Stage::F_SP121_Hyrule_Field; // See Stages.h for valid values
 	const int roomId = 0;
 	const int layerOverride = -1;
 
@@ -71,7 +71,7 @@ int main()
 	setEventFlag(DAT_804069b0, DAT_803a749c, 0); // (2x) Snow Peak (1x), Snow Peak Ruins (1x)
 	
 	// "TD" Flags
-	setEventFlag(DAT_80406f98, 0x601, 0); // (1x) Hyrule Field (Zora child event)
+	setEventFlag(DAT_80406f98, 0x601, 1); // (1x) Hyrule Field (Zora child event)
 	setEventFlag(DAT_80406f98, 0x602, 0); // (1x) Hyrule Field (Zora child event)
 	
 	// LV Dark Cleared Flag
